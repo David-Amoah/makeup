@@ -36,6 +36,10 @@ nav a:hover {
     border-bottom: 4px solid black;
 }
 
+.menu {
+    display: none;
+}
+
 .container {
     /* background-color: lawngreen; */
     margin: 0 auto;
@@ -199,4 +203,75 @@ button {
 #footer {
     text-align: center;
     color: #8b8b9f;
+}
+
+@media(max-width:1000px) {
+    .box-one,
+    .box-two,
+    .box-three,
+    .box-four,
+    .box-five,
+    .box-six {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media(max-width:850px) {
+    .box-one,
+    .box-two,
+    .box-three,
+    .box-four,
+    .box-five,
+    .box-six {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media(max-width:800px) {
+    nav {
+        display: none;
+    }
+    .menu {
+        display: block;
+        color: white;
+        font-size: 30px;
+    }
+    .banner {
+        padding: 1em;
+    }
+}
+
+@media(max-width:650px) {
+    .pix {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:450px) {
+    .pix {
+        margin: 0;
+    }
+    .banner {
+        background-position: center;
+    }
+}
+
+@media(max-width:380px) {
+    .box-one,
+    .box-two,
+    .box-three,
+    .box-four,
+    .box-five,
+    .box-six {
+        width: 100px;
+        height: 100px;
+    }
+    .pix {
+        margin: 0 auto;
+    }
+    .banner h1 {
+        font-size: 60px;
+    }
 }
