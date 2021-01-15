@@ -14,7 +14,7 @@ h1 {
 
 #main-header {
     width: 1370px;
-    max-width: 90%;
+    max-width: 100%;
     padding: 1em;
 }
 
@@ -51,17 +51,37 @@ nav a:hover {
 }
 
 .container img {
-    width: 150px;
+    width: 100px;
 }
 
 .banner {
     width: 1370px;
     max-width: 100%;
-    height: 450px;
+    height: 100vh;
     padding: 4em;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    background-image: linear-gradient(black 70%, white);
+    opacity: .5;
+    z-index: 1000;
+}
+
+.banner h1 {
+    z-index: 3000;
 }
 
 .banner {
+    max-width: 100%;
     text-align: center;
     font-size: 35px;
     background-image: url(../img/giphy.gif);
@@ -82,14 +102,16 @@ nav a:hover {
     background-color: white;
     font-size: 25px;
     max-width: 100%;
+    padding: 1rem;
 }
 
 .pix {
-    width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 90%;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(250px, auto);
+    max-width: 100%;
 }
 
 .box-one {
@@ -97,8 +119,7 @@ nav a:hover {
     height: 250px;
     background-image: url(../img/firstlady.jpg);
     background-size: cover;
-    margin: 10px;
-    border-radius: 15px
+    border-radius: 10px
 }
 
 .box-two {
@@ -106,8 +127,7 @@ nav a:hover {
     height: 250px;
     background-image: url(../img/2nd\ lady.jpg);
     background-size: cover;
-    margin: 10px;
-    border-radius: 15px
+    border-radius: 10px
 }
 
 .box-three {
@@ -115,8 +135,7 @@ nav a:hover {
     height: 250px;
     background-size: cover;
     background-image: url(../img/3rd\ lady.png);
-    margin: 10px;
-    border-radius: 15px
+    border-radius: 10px
 }
 
 .box-four {
@@ -124,8 +143,7 @@ nav a:hover {
     height: 250px;
     background-image: url(../img/eyeshadow.jpg);
     background-size: cover;
-    margin: 10px;
-    border-radius: 15px
+    border-radius: 10px
 }
 
 .box-five {
@@ -133,8 +151,7 @@ nav a:hover {
     height: 250px;
     background-image: url(../img/shimmer.jpg);
     background-size: cover;
-    margin: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .box-six {
@@ -142,8 +159,25 @@ nav a:hover {
     height: 250px;
     background-size: cover;
     background-image: url(../img/lipstick2.jpg);
-    margin: 10px;
-    border-radius: 15px
+    border-radius: 10px
+}
+
+.box-seven {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-image: url(../img/pexels-photo-457701.jpeg);
+    border-radius: 10px;
+    background-position: top center;
+}
+
+.box-eight {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-image: url(../img/smile.jpg);
+    border-radius: 10px;
+    background-position: top center;
 }
 
 .about {
@@ -177,24 +211,22 @@ nav a:hover {
     font-size: 20px;
 }
 
-.open {
+table {
     margin: 0 auto;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.close {
-    margin: 0 auto;
-    width: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+table th {
+    padding: .8rem;
 }
 
-span {
-    margin: .3em;
+table td {
+    padding: .5rem;
+}
+
+#footer .name {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
 }
 
 button {
@@ -216,15 +248,15 @@ button:hover {
     color: #000000;
 }
 
-@media(max-width:1000px) {
-    .box-one,
-    .box-two,
-    .box-three,
-    .box-four,
-    .box-five,
-    .box-six {
-        width: 250px;
-        height: 250px;
+@media(max-width:1070px) {
+    .pix {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .box-eight {
+        max-width: 100%;
+        width: 600px;
+        grid-column: 2/4;
+        background-position: center
     }
 }
 
