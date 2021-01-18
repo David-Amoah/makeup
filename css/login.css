@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 1200px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+form {
+    padding: .5rem;
+}
+
+input {
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    outline: none;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: .3em;
+    color: #000;
+}
+
+button {
+    border-radius: .3em;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 25%;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
+    cursor: pointer;
+    display: block;
+    background-color: #ffeebb;
+}
+
+button:hover {
+    background-color: #f7f2e5;
+}
+
+.button {
+    width: 50%;
+    margin: 0 auto;
+}
