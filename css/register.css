@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
-    background-color: #f8f1f1;
+}
+
+body {
+    background-color: rgb(238, 228, 228);
 }
 
 h1 {
@@ -8,9 +11,15 @@ h1 {
 }
 
 .container {
-    width: 1200px;
+    width: 500px;
     max-width: 90%;
     margin: 0 auto;
+    background-color: rgb(197, 180, 180);
+}
+
+::placeholder {
+    color: gray;
+    font-size: 20px;
 }
 
 form {
@@ -21,27 +30,27 @@ input {
     width: 50%;
     margin: 0 auto;
     display: block;
+    border: none;
     outline: none;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: .3em;
+    font-size: 20px;
 }
 
 button {
     border-radius: .3em;
     margin: 0 auto;
     padding: 1rem;
-    width: 25%;
+    width: 100px;
     font-weight: 700;
     font-style: italic;
     font-size: 20px;
     cursor: pointer;
     display: block;
-    /* background-color: ; */
     background-color: #ffeebb;
 }
 
 .button {
-    width: 50%;
     margin: 0 auto;
 }
